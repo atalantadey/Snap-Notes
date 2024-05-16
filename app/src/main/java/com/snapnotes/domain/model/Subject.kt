@@ -10,7 +10,9 @@ import com.snapnotes.presentation.theme.gradientl
 data class Subject(
     val name:String,
     val goalHours:String,
-    val colors:List<Color>
+    val colors:List<Color>,
+    val subjuctId:Int
+
 ){
     companion object{
         val subjectCardColor = listOf(gradientl, gradient2, gradient3, gradient4, gradient5)
