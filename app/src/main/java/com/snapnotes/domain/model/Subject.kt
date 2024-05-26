@@ -11,7 +11,7 @@ data class Subject(
     val name:String,
     val goalHours:String,
     val colors:List<Color>,
-    val subjuctId:Int
+    val subjectId:Int
 
 ){
     companion object{

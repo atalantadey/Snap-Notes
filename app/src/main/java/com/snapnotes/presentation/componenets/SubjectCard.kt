@@ -29,7 +29,7 @@ fun SubjectCad(
     onClick:()->Unit
 
 ) {
-    Box(modifier =modifier.size(150.dp).clickable { onClick }.background(
+    Box(modifier =modifier.size(150.dp).clickable { onClick() }.background(
         brush = Brush.verticalGradient(gradientColor, startY = 0.00f, endY = Float.POSITIVE_INFINITY, tileMode = TileMode.Clamp),
         shape = MaterialTheme.shapes.medium
     )) {

@@ -53,9 +53,8 @@ android {
 }
 
 dependencies {
-
+//compose navigation
     implementation(libs.androidx.lifecycle.runtime.compose)
-    val destinationVersion="1.9.52"
     implementation(libs.core)
     ksp(libs.ksp)
 
