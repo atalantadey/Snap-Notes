@@ -41,6 +41,7 @@ import androidx.compose.ui.graphics.StrokeCap
 import androidx.compose.ui.input.nestedscroll.nestedScroll
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
+import androidx.hilt.navigation.compose.hiltViewModel
 import com.ramcosta.composedestinations.annotation.Destination
 import com.ramcosta.composedestinations.navigation.DestinationsNavigator
 import com.snapnotes.Sess
@@ -58,6 +59,9 @@ data class SubjectScreenNav(val subjectId:Int)
 @Destination(navArgsDelegate = SubjectScreenNav::class)
 @Composable
 fun SubjectScreenRoute(navigator: DestinationsNavigator){
+
+    val viewModel:SubjectViewModel= hiltViewModel()
+
     SubjectScreen(
         onBackButtonClick = { navigator.navigateUp() },
         onAddTaskButtonClick = {  val navArg=TaskScreenNav(TaskId=null,subjectId = null)

@@ -35,6 +35,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.hilt.navigation.compose.hiltViewModel
 import com.ramcosta.composedestinations.annotation.Destination
 import com.ramcosta.composedestinations.navigation.DestinationsNavigator
 import com.snapnotes.Sess
@@ -47,6 +48,9 @@ import kotlinx.coroutines.launch
 @Destination
 @Composable
 fun SessionScreenRoute(navigator: DestinationsNavigator){
+
+    val viewModel:SessionViewModel= hiltViewModel()
+
     SessionScreen(onBackClick = {navigator.navigateUp()})
 }
 

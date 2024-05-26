@@ -53,7 +53,7 @@ android {
 }
 
 dependencies {
-//compose navigation
+    //compose navigation
     implementation(libs.androidx.lifecycle.runtime.compose)
     implementation(libs.core)
     ksp(libs.ksp)

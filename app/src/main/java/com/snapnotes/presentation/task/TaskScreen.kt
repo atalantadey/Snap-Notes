@@ -42,6 +42,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
+import androidx.hilt.navigation.compose.hiltViewModel
 import com.ramcosta.composedestinations.annotation.Destination
 import com.ramcosta.composedestinations.navigation.DestinationsNavigator
 import com.snapnotes.Util.Priority
@@ -59,6 +60,9 @@ data class TaskScreenNav(val TaskId:Int?, val subjectId:Int?)
 @Destination(navArgsDelegate = TaskScreenNav::class)
 @Composable
 fun TaskScreenRoute(navigator: DestinationsNavigator){
+
+    val viewModel:TaskViewModell= hiltViewModel()
+
     TaskScreen(onBackButtonClick = {navigator.navigateUp()})
 }
 

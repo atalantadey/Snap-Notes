@@ -10,7 +10,10 @@ import com.snapnotes.domain.model.Subject
 import com.snapnotes.domain.model.Task
 import com.snapnotes.presentation.NavGraphs
 import com.snapnotes.presentation.theme.SnapNotesTheme
+import dagger.hilt.android.AndroidEntryPoint
 
+
+@AndroidEntryPoint
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
